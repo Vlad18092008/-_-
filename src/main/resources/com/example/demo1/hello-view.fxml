@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.demo1.RegistrationController"
+      style="-fx-background-color: #1a1a1a;">
+
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-padding: 0 0 20 0;">
+        <Label text="💪" textFill="#FFD700">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label text="Импульс" textFill="#FFD700">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+
+        <Region HBox.hgrow="ALWAYS" style="-fx-background-color: transparent;" />
+
+        <Button text="Главное меню →"
+                onAction="#onMainMenuClick"
+                style="-fx-background-color: transparent; -fx-text-fill: #FFD700; -fx-font-size: 14px; -fx-cursor: hand;" />
+    </HBox>
+
+    <Label text="Регистрация" textFill="#FFFFFF">
+        <font>
+            <Font name="System Bold" size="20.0" />
+        </font>
+    </Label>
+
+    <TextField fx:id="имяField" promptText="Имя" style="-fx-background-color: #333333; -fx-text-fill: #FFFFFF; -fx-prompt-text-fill: #AAAAAA;" />
+
+    <TextField fx:id="emailField" promptText="Email" style="-fx-background-color: #333333; -fx-text-fill: #FFFFFF; -fx-prompt-text-fill: #AAAAAA;" />
+
+    <TextField fx:id="телефонField" promptText="Телефон" style="-fx-background-color: #333333; -fx-text-fill: #FFFFFF; -fx-prompt-text-fill: #AAAAAA;" />
+
+    <PasswordField fx:id="парольField" promptText="Пароль" style="-fx-background-color: #333333; -fx-text-fill: #FFFFFF; -fx-prompt-text-fill: #AAAAAA;" />
+
+    <PasswordField fx:id="подтвердитьПарольField" promptText="Подтвердите пароль" style="-fx-background-color: #333333; -fx-text-fill: #FFFFFF; -fx-prompt-text-fill: #AAAAAA;" />
+
+    <Button text="Зарегистрироваться"
+            onAction="#onRegisterClick"
+            style="-fx-background-color: #FFD700; -fx-text-fill: #1a1a1a; -fx-font-weight: bold; -fx-font-size: 16px; -fx-padding: 10 20; -fx-cursor: hand;" />
+
+    <Label text="Уже есть аккаунт?" textFill="#AAAAAA" />
+
+    <Button text="Войти"
+            onAction="#onLoginClick"
+            style="-fx-background-color: transparent; -fx-text-fill: #FFD700; -fx-underline: true; -fx-cursor: hand;" />
+</VBox>

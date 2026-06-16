@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo1.MainController"
+            style="-fx-background-color: #1a1a1a;">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #2a2a2a;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+
+            <Label text="💪" textFill="#FFD700">
+                <font>
+                    <Font name="System Bold" size="28.0" />
+                </font>
+            </Label>
+
+            <Label text="Импульс" textFill="#FFD700">
+                <font>
+                    <Font name="System Bold" size="22.0" />
+                </font>
+            </Label>
+
+            <Region prefWidth="0.0" HBox.hgrow="ALWAYS" style="-fx-background-color: transparent;" />
+
+            <Label text="Добро пожаловать!" textFill="#FFFFFF">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Label>
+
+            <Button text="Личный кабинет"
+                    onAction="#onPersonalCabClick"
+                    style="-fx-background-color: #FFD700; -fx-text-fill: #1a1a1a; -fx-font-weight: bold; -fx-font-size: 14px; -fx-padding: 8 16; -fx-cursor: hand;" />
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="10.0" style="-fx-background-color: #2a2a2a;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+            </padding>
+
+            <Label text="МЕНЮ" textFill="#FFD700" style="-fx-padding: 10;">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+
+            <Button text="Магазин"
+                    onAction="#onShopClick"
+                    style="-fx-background-color: #333333; -fx-text-fill: #FFFFFF; -fx-font-size: 16px; -fx-padding: 12 20; -fx-cursor: hand; -fx-alignment: CENTER_LEFT;" />
+
+            <Button text="Упражнения"
+                    onAction="#onExercisesClick"
+                    style="-fx-background-color: #333333; -fx-text-fill: #FFFFFF; -fx-font-size: 16px; -fx-padding: 12 20; -fx-cursor: hand; -fx-alignment: CENTER_LEFT;" />
+
+            <Button text="Тренеры"
+                    onAction="#onTrainersClick"
+                    style="-fx-background-color: #333333; -fx-text-fill: #FFFFFF; -fx-font-size: 16px; -fx-padding: 12 20; -fx-cursor: hand; -fx-alignment: CENTER_LEFT;" />
+
+            <Button text="О нас"
+                    onAction="#onAboutClick"
+                    style="-fx-background-color: #333333; -fx-text-fill: #FFFFFF; -fx-font-size: 16px; -fx-padding: 12 20; -fx-cursor: hand; -fx-alignment: CENTER_LEFT;" />
+
+            <Region prefHeight="0.0" prefWidth="0.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent;" />
+
+            <Button text="Выход"
+                    onAction="#onExitClick"
+                    style="-fx-background-color: #FF4444; -fx-text-fill: #FFFFFF; -fx-font-size: 14px; -fx-padding: 10 18; -fx-cursor: hand;" />
+        </VBox>
+    </left>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="40.0" left="50.0" right="50.0" top="40.0" />
+            </padding>
+
+            <Label text="Фитнес клуб Импульс" textFill="#FFD700">
+                <font>
+                    <Font name="System Bold" size="36.0" />
+                </font>
+            </Label>
+
+            <Label text="Ваш путь к здоровью начинается здесь!" textFill="#FFFFFF">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Label>
+
+            <Separator />
+
+            <VBox spacing="12.0" style="-fx-padding: 20;">
+                <Label text="Современное оборудование" textFill="#FFFFFF">
+                    <font>
+                        <Font name="System Regular" size="16.0" />
+                    </font>
+                </Label>
+
+                <Label text="Профессиональные тренеры" textFill="#FFFFFF">
+                    <font>
+                        <Font name="System Regular" size="16.0" />
+                    </font>
+                </Label>
+
+                <Label text="Работаем 24/7" textFill="#FFFFFF">
+                    <font>
+                        <Font name="System Regular" size="16.0" />
+                    </font>
+                </Label>
+
+                <Label text="Йога, кардио, силовые тренировки" textFill="#FFFFFF">
+                    <font>
+                        <Font name="System Regular" size="16.0" />
+                    </font>
+                </Label>
+
+                <Label text="Индивидуальные программы тренировок" textFill="#FFFFFF">
+                    <font>
+                        <Font name="System Regular" size="16.0" />
+                    </font>
+                </Label>
+
+                <Label text="Комфортные раздевалки и сауна" textFill="#FFFFFF">
+                    <font>
+                        <Font name="System Regular" size="16.0" />
+                    </font>
+                </Label>
+            </VBox>
+
+            <Separator />
+
+            <VBox alignment="CENTER" spacing="10.0">
+                <Label text="Адрес: г. Саратов, ул. Фитнесовая, 1" textFill="#AAAAAA">
+                    <font>
+                        <Font name="System Regular" size="14.0" />
+                    </font>
+                </Label>
+
+                <Label text="Телефон: +7 (8452) 123-456" textFill="#AAAAAA">
+                    <font>
+                        <Font name="System Regular" size="14.0" />
+                    </font>
+                </Label>
+
+                <Label text="Email: info@impuls-fitness.ru" textFill="#AAAAAA">
+                    <font>
+                        <Font name="System Regular" size="14.0" />
+                    </font>
+                </Label>
+            </VBox>
+
+            <Button text="Записаться на тренировку"
+                    onAction="#onBookClick"
+                    style="-fx-background-color: #FFD700; -fx-text-fill: #1a1a1a; -fx-font-weight: bold; -fx-font-size: 16px; -fx-padding: 12 24; -fx-cursor: hand;" />
+        </VBox>
+    </center>
+</BorderPane>

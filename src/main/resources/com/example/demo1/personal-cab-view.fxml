@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo1.PersonalCabController"
+            style="-fx-background-color: #1a1a1a;">
+
+    <top>
+        <VBox spacing="0.0" style="-fx-background-color: #2a2a2a;">
+            <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: #2a2a2a;">
+                <padding>
+                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                </padding>
+
+                <Label text="💪" textFill="#FFD700">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+
+                <Label text="Импульс" textFill="#FFD700">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+
+                <Region prefWidth="0.0" HBox.hgrow="ALWAYS" style="-fx-background-color: transparent;" />
+
+                <Button text="Главное меню"
+                        onAction="#onMainMenuClick"
+                        style="-fx-background-color: #FFD700; -fx-text-fill: #1a1a1a; -fx-font-weight: bold; -fx-font-size: 14px; -fx-padding: 8 16; -fx-cursor: hand;" />
+
+                <Label fx:id="welcomeLabel" text="Добро пожаловать!" textFill="#FFFFFF">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+
+                <Button fx:id="exitButton" text="Выйти"
+                        onAction="#onExitClick"
+                        style="-fx-background-color: #FF4444; -fx-text-fill: #FFFFFF; -fx-font-weight: bold; -fx-font-size: 14px; -fx-padding: 8 16; -fx-cursor: hand;"
+                        visible="true" managed="true" />
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox fx:id="userDataContainer" alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="40.0" left="50.0" right="50.0" top="40.0" />
+            </padding>
+
+            <VBox fx:id="userInfoBlock" spacing="15.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 10;" visible="true" managed="true">
+                <padding>
+                    <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+                </padding>
+
+                <Label text="Личный кабинет" textFill="#FFD700">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                </Label>
+
+                <Separator />
+
+                <VBox spacing="10.0">
+                    <HBox spacing="15.0">
+                        <Label text="Имя:" minWidth="120.0" textFill="#AAAAAA">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="nameLabel" textFill="#FFFFFF">
+                            <font>
+                                <Font name="System Regular" size="16.0" />
+                            </font>
+                        </Label>
+                    </HBox>
+
+                    <HBox spacing="15.0">
+                        <Label text="Email:" minWidth="120.0" textFill="#AAAAAA">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="emailLabel" textFill="#FFFFFF">
+                            <font>
+                                <Font name="System Regular" size="16.0" />
+                            </font>
+                        </Label>
+                    </HBox>
+
+                    <HBox spacing="15.0">
+                        <Label text="Телефон:" minWidth="120.0" textFill="#AAAAAA">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="phoneLabel" textFill="#FFFFFF">
+                            <font>
+                                <Font name="System Regular" size="16.0" />
+                            </font>
+                        </Label>
+                    </HBox>
+                </VBox>
+
+                <Separator />
+
+                <Button text="Редактировать профиль"
+                        onAction="#onEditClick"
+                        style="-fx-background-color: #FFD700; -fx-text-fill: #1a1a1a; -fx-font-weight: bold; -fx-font-size: 14px; -fx-padding: 10 20; -fx-cursor: hand;" />
+            </VBox>
+
+            <VBox fx:id="guestBlock" alignment="CENTER" spacing="20.0" visible="false" managed="false">
+                <Label text="Вы не авторизованы" textFill="#FF4444">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+
+                <Label text="Пожалуйста, войдите в систему или зарегистрируйтесь" textFill="#FFFFFF">
+                    <font>
+                        <Font name="System Regular" size="16.0" />
+                    </font>
+                </Label>
+
+                <Button text="Войти"
+                        onAction="#onLoginClick"
+                        style="-fx-background-color: #FFD700; -fx-text-fill: #1a1a1a; -fx-font-weight: bold; -fx-font-size: 16px; -fx-padding: 12 30; -fx-cursor: hand;" />
+
+                <Button text="Зарегистрироваться"
+                        onAction="#onRegisterClick"
+                        style="-fx-background-color: transparent; -fx-border-color: #FFD700; -fx-border-width: 2; -fx-text-fill: #FFD700; -fx-font-weight: bold; -fx-font-size: 16px; -fx-padding: 12 30; -fx-cursor: hand;" />
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

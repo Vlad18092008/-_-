@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo1.AboutController"
+            style="-fx-background-color: #000000;">
+
+    <top>
+        <VBox spacing="0.0" style="-fx-background-color: #000000;">
+            <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: #000000;">
+                <padding>
+                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                </padding>
+
+                <Label text="💪" textFill="#FFD700">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+
+                <Label text="Импульс" textFill="#FFD700">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+
+                <Region HBox.hgrow="ALWAYS" style="-fx-background-color: transparent;" />
+
+                <Button text="Главное меню →"
+                        onAction="#onMainMenuClick"
+                        style="-fx-background-color: transparent; -fx-text-fill: #FFD700; -fx-font-size: 14px; -fx-cursor: hand;" />
+            </HBox>
+
+            <HBox alignment="CENTER" style="-fx-background-color: #000000;">
+                <padding>
+                    <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+                </padding>
+
+                <Label text="О нас" textFill="#FFFFFF">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                </Label>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+            <content>
+                <VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #000000;">
+                    <padding>
+                        <Insets bottom="40.0" left="30.0" right="30.0" top="30.0" />
+                    </padding>
+
+                    <!-- Информация о клубе -->
+                    <VBox spacing="10.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 15;">
+                        <padding>
+                            <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+                        </padding>
+
+                        <Label text="Фитнес-клуб Импульс" textFill="#FFD700">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+
+                        <Separator />
+
+                        <VBox spacing="8.0">
+                            <Label text="📍 Адрес: Энгельс, ул. Тельмана, 16, 3 этаж" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="14.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="📞 Телефон: +7 (8452) 33-86-49" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="14.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="🕒 Будни: с 7:00 до 24:00" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="14.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="🕒 Выходные: с 9:00 до 22:00" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="14.0" />
+                                </font>
+                            </Label>
+                        </VBox>
+
+                        <Separator />
+
+                        <Label text="Мы предлагаем:" textFill="#FFD700">
+                            <font>
+                                <Font name="System Bold" size="16.0" />
+                            </font>
+                        </Label>
+
+                        <VBox spacing="5.0">
+                            <Label text="• Современное оборудование" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="14.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="• Профессиональные тренеры" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="14.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="• Групповые занятия" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="14.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="• Сауна и фитнес-бар" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="14.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="• Индивидуальные программы тренировок" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="14.0" />
+                                </font>
+                            </Label>
+                        </VBox>
+                    </VBox>
+
+                    <!-- Расписание групповых занятий -->
+                    <VBox spacing="10.0" style="-fx-background-color: #2a2a2a; -fx-background-radius: 15;">
+                        <padding>
+                            <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+                        </padding>
+
+                        <Label text="📅 Расписание групповых занятий" textFill="#FFD700">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+
+                        <Label text="8 июня - 14 июня" textFill="#AAAAAA">
+                            <font>
+                                <Font name="System Regular" size="14.0" />
+                            </font>
+                        </Label>
+
+                        <Separator />
+
+                        <!-- Понедельник -->
+                        <VBox spacing="5.0">
+                            <Label text="ПОНЕДЕЛЬНИК" textFill="#FFD700">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="09:00 - РЕЛЬЕФНОЕ ТЕЛО Виктория (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="10:00 - ЙОГАЛАТЕС Виктория (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="17:00 - СПИНА, РУКИ, ПЛЕЧИ Ирина (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="18:00 - ПИЛАТЕС Ирина (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="19:00 - ЯГОДИЦЫ/ПРЕСС Ирина (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="20:00 - ЙОГА Оксана (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+                        </VBox>
+
+                        <Separator />
+
+                        <!-- Вторник -->
+                        <VBox spacing="5.0">
+                            <Label text="ВТОРНИК" textFill="#FFD700">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="09:00 - СТРОЙНЫЕ НОГИ Александра (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="10:00 - ГИБКОСТЬ Александра (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="17:00 - ПРЕСС/ГИБКОСТЬ Ольга (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="18:00 - РЕЛЬЕФНОЕ ТЕЛО Ольга (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="19:00 - ПИЛАТЕС Ольга (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="20:00 - ЗУМБА Мария (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+                        </VBox>
+
+                        <Separator />
+
+                        <!-- Среда -->
+                        <VBox spacing="5.0">
+                            <Label text="СРЕДА" textFill="#FFD700">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="09:00 - ЙОГА Оксана (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="10:00 - ФУНКЦИОНАЛЬНЫЙ ТРЕНИНГ Ксения (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="11:00 - ГИБКОСТЬ Ксения (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="18:00 - СТРОЙНЫЕ НОГИ Александра (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="19:00 - РЕЛЬЕФНОЕ ТЕЛО Александра (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="20:00 - ГИБКОСТЬ Александра (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="21:00 - СОВРЕМЕННЫЕ ТАНЦЫ Анастасия (55 мин.) бизнес" textFill="#FFD700">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+                        </VBox>
+
+                        <Separator />
+
+                        <!-- Четверг -->
+                        <VBox spacing="5.0">
+                            <Label text="ЧЕТВЕРГ" textFill="#FFD700">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="09:00 - СПИНА, РУКИ, ПЛЕЧИ Виктория (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="10:00 - ПИЛАТЕС Виктория (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="17:00 - ФУНКЦИОНАЛЬНЫЙ ТРЕНИНГ Ольга (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="18:00 - СТЕП Ольга (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="19:00 - ЗУМБА Мария (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+                        </VBox>
+
+                        <Separator />
+
+                        <!-- Пятница -->
+                        <VBox spacing="5.0">
+                            <Label text="ПЯТНИЦА" textFill="#FFD700">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="09:30 - ЙОГА Оксана (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="10:30 - РЕЛЬЕФНОЕ ТЕЛО Ксения (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="11:30 - КОР/ГИБКОСТЬ Ксения (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="17:00 - ЯГОДИЦЫ/ПРЕСС Ольга (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="18:00 - СПИНА, РУКИ, ПЛЕЧИ Ольга (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="19:00 - ЙОГА Оксана (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+                        </VBox>
+
+                        <Separator />
+
+                        <!-- Суббота -->
+                        <VBox spacing="5.0">
+                            <Label text="СУББОТА" textFill="#FFD700">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="09:30 - ПИЛАТЕС Ирина (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="10:30 - РЕЛЬЕФНОЕ ТЕЛО Ирина (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="11:30 - ЗДОРОВАЯ СПИНА Ирина (55 мин.) бизнес" textFill="#FFD700">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+                        </VBox>
+
+                        <Separator />
+
+                        <!-- Воскресенье -->
+                        <VBox spacing="5.0">
+                            <Label text="ВОСКРЕСЕНЬЕ" textFill="#FFD700">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="10:00 - ЯГОДИЦЫ/ПРЕСС Ирина (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+
+                            <Label text="11:00 - ГИБКОСТЬ Ирина (55 мин.)" textFill="#FFFFFF">
+                                <font>
+                                    <Font name="System Regular" size="13.0" />
+                                </font>
+                            </Label>
+                        </VBox>
+
+                        <Separator />
+
+                        <Label text="бизнес - Платные занятия: для членов клуба 400 ₽, для гостей 500 ₽" textFill="#FFD700">
+                            <font>
+                                <Font name="System Regular" size="12.0" />
+                            </font>
+                        </Label>
+
+                        <Label text="Запись по телефону: +7 (8452) 33-86-49" textFill="#AAAAAA">
+                            <font>
+                                <Font name="System Regular" size="12.0" />
+                            </font>
+                        </Label>
+
+                        <Label text="Администрация оставляет за собой право внесения изменений в расписание" textFill="#AAAAAA">
+                            <font>
+                                <Font name="System Regular" size="11.0" />
+                            </font>
+                        </Label>
+                    </VBox>
+
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
