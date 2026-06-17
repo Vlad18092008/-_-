@@ -22,7 +22,7 @@
                 </font>
             </Label>
 
-            <Label text="Импульс" textFill="#FFD700">
+            <Label text="Импульсс" textFill="#FFD700">
                 <font>
                     <Font name="System Bold" size="22.0" />
                 </font>
